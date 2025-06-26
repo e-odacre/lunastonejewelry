@@ -1,0 +1,193 @@
+<mjml>
+  <mj-head>
+    <mj-title>Don't Forget Your Beautiful Pieces</mj-title>
+    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" />
+    <mj-attributes>
+      <mj-all font-family="Inter, Arial, sans-serif" />
+      <mj-text font-size="16px" color="#2c2c2c" line-height="1.6" />
+      <mj-button background-color="#8B4513" color="#ffffff" font-weight="600" border-radius="4px" />
+    </mj-attributes>
+  </mj-head>
+  
+  <mj-body background-color="#faf9f7">
+    
+    <!-- Header -->
+    <mj-section background-color="#ffffff" padding="20px 0">
+      <mj-column>
+        <mj-image src="{{organization.logo}}" width="120px" align="center" alt="Luna & Stone Jewelry" />
+        <mj-text font-size="24px" font-weight="600" align="center" color="#2c2c2c" padding="15px 0 5px">
+          Luna & Stone Jewelry
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Hero Section -->
+    <mj-section background-color="#f8f6f3" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="32px" font-weight="600" align="center" color="#2c2c2c" padding="0 0 15px">
+          Still thinking about your pieces?
+        </mj-text>
+        <mj-text font-size="18px" align="center" color="#6b6b6b" padding="0 0 30px">
+          Hi {{person.first_name|default:"there"}}, I noticed you left some beautiful jewelry in your cart. Let me save them for you! ✨
+        </mj-text>
+        <mj-image src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500" width="400px" alt="Beautiful jewelry pieces" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Cart Items -->
+    <mj-section background-color="#ffffff" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="22px" font-weight="600" color="#2c2c2c" align="center" padding="0 0 30px">
+          Your Cart
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Dynamic Cart Items (Klaviyo will populate) -->
+    {% for item in event.extra.line_items %}
+    <mj-section background-color="#ffffff" padding="0 20px 30px">
+      <mj-column width="35%">
+        <mj-image src="{{ item.product.images.0.src }}" width="100%" alt="{{ item.product.title }}" />
+      </mj-column>
+      <mj-column width="65%">
+        <mj-text font-size="18px" font-weight="600" color="#2c2c2c" padding="0 0 10px">
+          {{ item.product.title }}
+        </mj-text>
+        <mj-text font-size="16px" color="#6b6b6b" padding="0 0 10px">
+          Quantity: {{ item.quantity }}
+        </mj-text>
+        <mj-text font-size="20px" font-weight="600" color="#8B4513" padding="0">
+          ${{ item.price|floatformat:2 }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    {% endfor %}
+
+    <!-- Cart Total -->
+    <mj-section background-color="#f8f6f3" padding="20px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="600" color="#2c2c2c" align="center" padding="0">
+          Total: ${{ event.extra.total_price|floatformat:2 }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Personal Message -->
+    <mj-section background-color="#ffffff" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="18px" color="#4a4a4a" padding="0 0 20px">
+          Hi {{person.first_name|default:"beautiful"}},
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          I saw you were drawn to some gorgeous pieces from our collection! As someone who handcrafts each item with love, I wanted to personally reach out.
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          Sometimes the universe puts the perfect piece in front of us when we need it most. These stones chose you for a reason — don't let them slip away.
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          Your cart is reserved for the next 24 hours. After that, I can't guarantee these exact pieces will still be available.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Urgency & CTA -->
+    <mj-section background-color="#8B4513" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="24px" font-weight="600" color="#ffffff" align="center" padding="0 0 15px">
+          Complete Your Order
+        </mj-text>
+        <mj-text font-size="16px" color="#e8e8e8" align="center" padding="0 0 25px">
+          Your pieces are waiting for you ✨
+        </mj-text>
+        <mj-button background-color="#ffffff" color="#8B4513" font-weight="600" padding="15px 30px" href="{{ event.extra.checkout_url }}">
+          Complete My Order
+        </mj-button>
+        <mj-text font-size="14px" color="#d4d4d4" align="center" padding="20px 0 0">
+          🚚 Free shipping on orders over $75<br/>
+          💝 Each order includes a handwritten note
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Why Choose Luna & Stone -->
+    <mj-section background-color="#f8f6f3" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="600" color="#2c2c2c" align="center" padding="0 0 25px">
+          Why Choose Luna & Stone?
+        </mj-text>
+        <mj-table>
+          <tr>
+            <td style="padding: 15px; text-align: center; width: 33.33%;">
+              <div style="font-size: 24px; margin-bottom: 10px;">🤲</div>
+              <div style="font-weight: 600; color: #2c2c2c; margin-bottom: 5px;">Handcrafted</div>
+              <div style="color: #6b6b6b; font-size: 14px;">Each piece is made with intention in my Portland studio</div>
+            </td>
+            <td style="padding: 15px; text-align: center; width: 33.33%;">
+              <div style="font-size: 24px; margin-bottom: 10px;">🌱</div>
+              <div style="font-weight: 600; color: #2c2c2c; margin-bottom: 5px;">Ethically Sourced</div>
+              <div style="color: #6b6b6b; font-size: 14px;">Only the finest materials from responsible suppliers</div>
+            </td>
+            <td style="padding: 15px; text-align: center; width: 33.33%;">
+              <div style="font-size: 24px; margin-bottom: 10px;">⭐</div>
+              <div style="font-weight: 600; color: #2c2c2c; margin-bottom: 5px;">5-Star Reviews</div>
+              <div style="color: #6b6b6b; font-size: 14px;">Loved by 2,500+ happy customers</div>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <!-- Questions Section -->
+    <mj-section background-color="#ffffff" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="600" color="#2c2c2c" padding="0 0 20px">
+          Have Questions?
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          I'm here to help! Whether you're wondering about sizing, stone meanings, or care instructions, I personally respond to every email.
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          Simply reply to this email or reach out at hello@lunaandstone.com
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          With love,<br/>
+          <em>Sarah</em>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Continue Shopping -->
+    <mj-section background-color="#f8f6f3" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="18px" font-weight="600" color="#2c2c2c" align="center" padding="0 0 15px">
+          Want to Browse More?
+        </mj-text>
+        <mj-text color="#6b6b6b" align="center" padding="0 0 25px">
+          Explore our full collection of handcrafted jewelry
+        </mj-text>
+        <mj-button background-color="#8B4513" color="#ffffff" href="{{ organization.url }}" padding="12px 25px">
+          Continue Shopping
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section background-color="#2c2c2c" padding="40px 20px">
+      <mj-column>
+        <mj-social font-size="15px" icon-size="30px" mode="horizontal" align="center">
+          <mj-social-element name="instagram" background-color="#E4405F" href="https://instagram.com/lunaandstonejewelry" />
+          <mj-social-element name="facebook" background-color="#3b5998" href="https://facebook.com/lunaandstonejewelry" />
+          <mj-social-element name="pinterest" background-color="#bd081c" href="https://pinterest.com/lunaandstonejewelry" />
+        </mj-social>
+        <mj-text font-size="14px" color="#a8a8a8" align="center" padding="25px 0 10px">
+          Luna & Stone Jewelry | Portland, Oregon<br/>
+          hello@lunaandstone.com
+        </mj-text>
+        <mj-text font-size="12px" color="#707070" align="center" padding="15px 0 0">
+          <a href="{% unsubscribe_link %}" style="color: #8B4513;">Unsubscribe</a> | <a href="{{ organization.url }}" style="color: #8B4513;">Visit our store</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
