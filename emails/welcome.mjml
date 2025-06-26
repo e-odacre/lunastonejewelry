@@ -1,0 +1,195 @@
+<mjml>
+  <mj-head>
+    <mj-title>Welcome to Luna & Stone</mj-title>
+    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" />
+    <mj-attributes>
+      <mj-all font-family="Inter, Arial, sans-serif" />
+      <mj-text font-size="16px" color="#2c2c2c" line-height="1.6" />
+      <mj-button background-color="#8B4513" color="#ffffff" font-weight="600" border-radius="4px" />
+    </mj-attributes>
+  </mj-head>
+  
+  <mj-body background-color="#faf9f7">
+    
+    <!-- Header -->
+    <mj-section background-color="#ffffff" padding="20px 0">
+      <mj-column>
+        <mj-image src="{{organization.logo}}" width="120px" align="center" alt="Luna & Stone Jewelry" />
+        <mj-text font-size="24px" font-weight="600" align="center" color="#2c2c2c" padding="15px 0 5px">
+          Luna & Stone Jewelry
+        </mj-text>
+        <mj-text font-size="14px" align="center" color="#8a8a8a" padding="0">
+          <a href="#" style="color: #8a8a8a; text-decoration: none; margin: 0 15px;">Shop</a>
+          <a href="#" style="color: #8a8a8a; text-decoration: none; margin: 0 15px;">About</a>
+          <a href="#" style="color: #8a8a8a; text-decoration: none; margin: 0 15px;">Contact</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Hero Section -->
+    <mj-section background-color="#ffffff" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="32px" font-weight="600" align="center" color="#2c2c2c" padding="0 0 15px">
+          Welcome to Luna & Stone, {{ person.first_name|default:"friend" }}
+        </mj-text>
+        <mj-text font-size="18px" align="center" color="#6b6b6b" padding="0 0 30px">
+          Your journey with handcrafted jewelry begins here ✨
+        </mj-text>
+        <mj-image src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=600" width="500px" alt="Handcrafted jewelry making" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Personal Welcome -->
+    <mj-section background-color="#f8f6f3" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="24px" font-weight="600" color="#2c2c2c" padding="0 0 20px">
+          Hi {{first_name|default:"there"}}, I'm Sarah
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          Thank you for joining the Luna & Stone family! I started this journey in my Portland studio with a simple belief: jewelry should tell your story.
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          Every piece I create is handcrafted with intention, using ethically sourced stones and metals that speak to the soul. Whether you're drawn to the mystical energy of moonstone or the grounding power of onyx, each Luna & Stone piece is designed to be more than an accessory—it's a companion on your journey.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Behind the Scenes -->
+    <mj-section background-color="#ffffff" padding="40px 20px">
+      <mj-column width="40%">
+        <mj-image src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400" width="100%" alt="Hands crafting jewelry" />
+      </mj-column>
+      <mj-column width="60%">
+        <mj-text font-size="22px" font-weight="600" color="#2c2c2c" padding="0 0 15px">
+          How Luna & Stone Began
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 15px">
+          What started as a weekend hobby quickly became my passion. Working with natural stones and precious metals felt like meditation—each piece seemed to have its own energy waiting to be discovered.
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 15px">
+          <strong>Our values:</strong><br/>
+          ✨ Ethically sourced materials<br/>
+          🤲 Handcrafted with intention<br/>
+          💝 Personal connection with every piece
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- What to Expect -->
+    <mj-section background-color="#f8f6f3" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="22px" font-weight="600" color="#2c2c2c" align="center" padding="0 0 25px">
+          What to Expect as Part of Our Circle
+        </mj-text>
+        <mj-table>
+          <tr>
+            <td style="padding: 15px; text-align: center; width: 25%;">
+              <div style="font-size: 24px; margin-bottom: 10px;">🌟</div>
+              <div style="font-weight: 600; color: #2c2c2c; margin-bottom: 5px;">New Collections</div>
+              <div style="color: #6b6b6b; font-size: 14px;">First access to limited pieces</div>
+            </td>
+            <td style="padding: 15px; text-align: center; width: 25%;">
+              <div style="font-size: 24px; margin-bottom: 10px;">💎</div>
+              <div style="font-weight: 600; color: #2c2c2c; margin-bottom: 5px;">Care Tips</div>
+              <div style="color: #6b6b6b; font-size: 14px;">Keep your jewelry beautiful</div>
+            </td>
+            <td style="padding: 15px; text-align: center; width: 25%;">
+              <div style="font-size: 24px; margin-bottom: 10px;">📖</div>
+              <div style="font-weight: 600; color: #2c2c2c; margin-bottom: 5px;">Stone Stories</div>
+              <div style="color: #6b6b6b; font-size: 14px;">Learn about each gemstone</div>
+            </td>
+            <td style="padding: 15px; text-align: center; width: 25%;">
+              <div style="font-size: 24px; margin-bottom: 10px;">💌</div>
+              <div style="font-weight: 600; color: #2c2c2c; margin-bottom: 5px;">Exclusive Offers</div>
+              <div style="color: #6b6b6b; font-size: 14px;">Member-only discounts</div>
+            </td>
+          </tr>
+        </mj-table>
+      </mj-column>
+    </mj-section>
+
+    <!-- First Purchase Incentive -->
+    <mj-section background-color="#8B4513" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="24px" font-weight="600" color="#ffffff" align="center" padding="0 0 15px">
+          A Little Something Special
+        </mj-text>
+        <mj-text font-size="18px" color="#f4f4f4" align="center" padding="0 0 10px">
+          Welcome gift: 15% off your first order
+        </mj-text>
+        <mj-text font-size="16px" color="#e8e8e8" align="center" padding="0 0 25px">
+          Use code <strong>WELCOME15</strong> • Valid for 7 days
+        </mj-text>
+        <mj-button background-color="#ffffff" color="#8B4513" font-weight="600" padding="15px 30px" href="{{ organization.url }}">
+          Start Shopping
+        </mj-button>
+        <mj-text font-size="14px" color="#d4d4d4" align="center" padding="15px 0 0">
+          *Offer expires {{expiry_date|date:"F j, Y"}}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Featured Products Preview -->
+    <mj-section background-color="#ffffff" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="600" color="#2c2c2c" align="center" padding="0 0 30px">
+          Handpicked Just for You
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section background-color="#ffffff" padding="0 20px 40px">
+      <mj-column width="33.33%">
+        <mj-image src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=300" width="100%" alt="Moonstone Ring" />
+        <mj-text font-size="16px" font-weight="600" color="#2c2c2c" align="center" padding="15px 0 5px">
+          Moonstone Ring
+        </mj-text>
+        <mj-text font-size="18px" color="#8B4513" align="center" font-weight="600" padding="0">
+          $89
+        </mj-text>
+      </mj-column>
+      <mj-column width="33.33%">
+        <mj-image src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=300" width="100%" alt="Amethyst Pendant" />
+        <mj-text font-size="16px" font-weight="600" color="#2c2c2c" align="center" padding="15px 0 5px">
+          Amethyst Pendant
+        </mj-text>
+        <mj-text font-size="18px" color="#8B4513" align="center" font-weight="600" padding="0">
+          $145
+        </mj-text>
+      </mj-column>
+      <mj-column width="33.33%">
+        <mj-image src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=300" width="100%" alt="Rose Quartz Earrings" />
+        <mj-text font-size="16px" font-weight="600" color="#2c2c2c" align="center" padding="15px 0 5px">
+          Rose Quartz Earrings
+        </mj-text>
+        <mj-text font-size="18px" color="#8B4513" align="center" font-weight="600" padding="0">
+          $65
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section background-color="#2c2c2c" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="18px" font-weight="600" color="#ffffff" align="center" padding="0 0 20px">
+          Stay Connected
+        </mj-text>
+        <mj-social font-size="15px" icon-size="30px" mode="horizontal" align="center">
+          <mj-social-element name="instagram" background-color="#E4405F" href="https://instagram.com/lunaandstonejewelry" />
+          <mj-social-element name="facebook" background-color="#3b5998" href="https://facebook.com/lunaandstonejewelry" />
+          <mj-social-element name="pinterest" background-color="#bd081c" href="https://pinterest.com/lunaandstonejewelry" />
+        </mj-social>
+        <mj-text font-size="14px" color="#a8a8a8" align="center" padding="25px 0 10px">
+          Luna & Stone Jewelry<br/>
+          Portland, Oregon<br/>
+          hello@lunaandstone.com
+        </mj-text>
+        <mj-text font-size="12px" color="#707070" align="center" padding="15px 0 0">
+          You're receiving this email because you signed up for updates from Luna & Stone Jewelry.<br/>
+          <a href="{% unsubscribe_link %}" style="color: #8B4513;">Unsubscribe</a> | <a href="{{ organization.url }}" style="color: #8B4513;">Visit our store</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
