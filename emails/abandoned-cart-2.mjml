@@ -1,0 +1,225 @@
+<mjml>
+  <mj-head>
+    <mj-title>Your Luna & Stone Pieces Are Almost Gone</mj:title>
+    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" />
+    <mj-attributes>
+      <mj-all font-family="Inter, Arial, sans-serif" />
+      <mj-text font-size="16px" color="#2c2c2c" line-height="1.6" />
+      <mj-button background-color="#8B4513" color="#ffffff" font-weight="600" border-radius="4px" />
+    </mj-attributes>
+  </mj-head>
+  
+  <mj-body background-color="#faf9f7">
+    
+    <!-- Header -->
+    <mj-section background-color="#ffffff" padding="20px 0">
+      <mj-column>
+        <mj-image src="{{organization.logo}}" width="120px" align="center" alt="Luna & Stone Jewelry" />
+        <mj-text font-size="24px" font-weight="600" align="center" color="#2c2c2c" padding="15px 0 5px">
+          Luna & Stone Jewelry
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Urgency Hero -->
+    <mj-section background-color="#8B4513" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="28px" font-weight="600" align="center" color="#ffffff" padding="0 0 15px">
+          ⏰ Only a Few Hours Left
+        </mj-text>
+        <mj-text font-size="18px" align="center" color="#f4f4f4" padding="0 0 20px">
+          {{person.first_name|default:"Beautiful"}}, your reserved pieces are about to be released to other customers
+        </mj-text>
+        <mj-text font-size="16px" align="center" color="#e8e8e8" padding="0">
+          Cart expires in less than 6 hours
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Cart Items Reminder -->
+    <mj-section background-color="#ffffff" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="22px" font-weight="600" color="#2c2c2c" align="center" padding="0 0 30px">
+          Don't Let These Slip Away
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Simplified Cart Display -->
+    {% for item in event.extra.line_items %}
+    <mj-section background-color="#f8f6f3" padding="20px">
+      <mj-column width="25%">
+        <mj-image src="{{ item.product.images.0.src }}" width="100%" alt="{{ item.product.title }}" />
+      </mj-column>
+      <mj-column width="50%">
+        <mj-text font-size="18px" font-weight="600" color="#2c2c2c" padding="0 0 5px">
+          {{ item.product.title }}
+        </mj-text>
+        <mj-text font-size="14px" color="#6b6b6b" padding="0">
+          Qty: {{ item.quantity }}
+        </mj-text>
+      </mj-column>
+      <mj-column width="25%">
+        <mj-text font-size="20px" font-weight="600" color="#8B4513" align="center" padding="10px 0">
+          ${{ item.price|floatformat:2 }}
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    {% endfor %}
+
+    <!-- Special Offer -->
+    <mj-section background-color="#2c2c2c" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="24px" font-weight="600" color="#ffffff" align="center" padding="0 0 15px">
+          Last Chance Special
+        </mj-text>
+        <mj-text font-size="20px" color="#8B4513" align="center" padding="0 0 15px" font-weight="600">
+          Take 10% Off Your Cart
+        </mj-text>
+        <mj-text font-size="16px" color="#e8e8e8" align="center" padding="0 0 25px">
+          Use code <strong>SAVE10</strong> at checkout<br/>
+          Valid for the next 6 hours only
+        </mj-text>
+        <mj-button background-color="#8B4513" color="#ffffff" font-weight="600" padding="15px 30px" href="{{ event.extra.checkout_url }}">
+          Complete Order & Save 10%
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Social Proof -->
+    <mj-section background-color="#f8f6f3" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="600" color="#2c2c2c" align="center" padding="0 0 25px">
+          Join 2,500+ Happy Customers
+        </mj-text>
+        
+        <!-- Quick Testimonial -->
+        <mj-section background-color="#ffffff" padding="25px 20px" border-radius="8px">
+          <mj-column width="20%">
+            <mj-image src="https://images.unsplash.com/photo-1494790108755-2616c96d5b26?w=100&h=100&fit=crop&crop=face" width="80px" border-radius="50%" alt="Customer" />
+          </mj-column>
+          <mj-column width="80%">
+            <mj-text font-size="16px" color="#2c2c2c" padding="0 0 10px" line-height="1.4">
+              "I almost didn't complete my order, but I'm SO glad I did. This is the most beautiful necklace I own!"
+            </mj-text>
+            <mj-text font-size="14px" color="#8B4513" font-weight="600" padding="0">
+              Jessica M. ⭐⭐⭐⭐⭐
+            </mj-text>
+          </mj-column>
+        </mj-section>
+      </mj-column>
+    </mj-section>
+
+    <!-- Scarcity Message -->
+    <mj-section background-color="#ffffff" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="18px" color="#4a4a4a" padding="0 0 20px">
+          {{person.first_name|default:"Friend"}},
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          I have to be honest with you — as a small business, I only have limited quantities of each piece. When they're gone, they're usually gone for months.
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          The pieces in your cart have been getting a lot of attention lately. I'd hate for you to miss out on something that clearly spoke to you.
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          This is your final reminder before I release your reserved items back to our general inventory.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Final CTA -->
+    <mj-section background-color="#8B4513" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="24px" font-weight="600" color="#ffffff" align="center" padding="0 0 15px">
+          Secure Your Pieces Now
+        </mj-text>
+        <mj-text font-size="16px" color="#e8e8e8" align="center" padding="0 0 25px">
+          Cart Total: ${{ event.extra.total_price|floatformat:2 }}<br/>
+          <strong>With 10% off: ${{ event.extra.total_price|multiply:0.9|floatformat:2 }}</strong>
+        </mj-text>
+        <mj-button background-color="#ffffff" color="#8B4513" font-weight="600" padding="15px 30px" href="{{ event.extra.checkout_url }}" font-size="16px">
+          Complete My Order Now
+        </mj-button>
+        <mj-text font-size="14px" color="#d4d4d4" align="center" padding="20px 0 0">
+          ⏰ Offer expires in 6 hours<br/>
+          🔒 Secure checkout • 💝 Free gift with every order
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Alternative Options -->
+    <mj-section background-color="#f8f6f3" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="18px" font-weight="600" color="#2c2c2c" align="center" padding="0 0 20px">
+          Still Not Sure?
+        </mj-text>
+        <mj-text color="#6b6b6b" align="center" padding="0 0 25px">
+          I understand big decisions take time. Here are a few options:
+        </mj-text>
+        
+        <mj-table>
+          <tr>
+            <td style="padding: 15px; text-align: center; width: 33.33%;">
+              <div style="font-size: 24px; margin-bottom: 10px;">💬</div>
+              <div style="font-weight: 600; color: #2c2c2c; margin-bottom: 5px;">Ask Sarah</div>
+              <div style="color: #6b6b6b; font-size: 14px;">Reply to this email with any questions</div>
+            </td>
+            <td style="padding: 15px; text-align: center; width: 33.33%;">
+              <div style="font-size: 24px; margin-bottom: 10px;">📱</div>
+              <div style="font-weight: 600; color: #2c2c2c; margin-bottom: 5px;">See Reviews</div>
+              <div style="color: #6b6b6b; font-size: 14px;">Check what others are saying</div>
+            </td>
+            <td style="padding: 15px; text-align: center; width: 33.33%;">
+              <div style="font-size: 24px; margin-bottom: 10px;">🛍️</div>
+              <div style="font-weight: 600; color: #2c2c2c; margin-bottom: 5px;">Browse More</div>
+              <div style="color: #6b6b6b; font-size: 14px;">Explore our full collection</div>
+            </td>
+          </tr>
+        </mj-table>
+        
+        <mj-button background-color="#8B4513" color="#ffffff" href="{{ organization.url }}" padding="12px 25px">
+          Visit Our Store
+        </mj-button>
+      </mj-column>
+    </mj-section>
+
+    <!-- Personal Note -->
+    <mj-section background-color="#ffffff" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="18px" color="#4a4a4a" padding="0 0 20px">
+          One last thing...
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          Every piece of Luna & Stone jewelry is created with the hope that it finds its perfect person. I truly believe these pieces chose you for a reason.
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          Whatever you decide, thank you for considering Luna & Stone. Your support means the world to this small business.
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          With gratitude,<br/>
+          <em>Sarah ✨</em>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section background-color="#2c2c2c" padding="40px 20px">
+      <mj-column>
+        <mj-social font-size="15px" icon-size="30px" mode="horizontal" align="center">
+          <mj-social-element name="instagram" background-color="#E4405F" href="https://instagram.com/lunaandstonejewelry" />
+          <mj-social-element name="facebook" background-color="#3b5998" href="https://facebook.com/lunaandstonejewelry" />
+          <mj-social-element name="pinterest" background-color="#bd081c" href="https://pinterest.com/lunaandstonejewelry" />
+        </mj-social>
+        <mj-text font-size="14px" color="#a8a8a8" align="center" padding="25px 0 10px">
+          Luna & Stone Jewelry | Portland, Oregon<br/>
+          hello@lunaandstone.com
+        </mj-text>
+        <mj-text font-size="12px" color="#707070" align="center" padding="15px 0 0">
+          <a href="{% unsubscribe_link %}" style="color: #8B4513;">Unsubscribe</a> | <a href="{{ organization.url }}" style="color: #8B4513;">Visit our store</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
