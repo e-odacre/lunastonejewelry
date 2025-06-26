@@ -1,0 +1,225 @@
+<mjml>
+  <mj-head>
+    <mj-title>The Magic Behind Your Stones</mj-title>
+    <mj-font name="Inter" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" />
+    <mj-attributes>
+      <mj-all font-family="Inter, Arial, sans-serif" />
+      <mj-text font-size="16px" color="#2c2c2c" line-height="1.6" />
+      <mj-button background-color="#8B4513" color="#ffffff" font-weight="600" border-radius="4px" />
+    </mj-attributes>
+  </mj-head>
+  
+  <mj-body background-color="#faf9f7">
+    
+    <!-- Header -->
+    <mj-section background-color="#ffffff" padding="20px 0">
+      <mj-column>
+        <mj-image src="{{organization.logo}}" width="120px" align="center" alt="Luna & Stone Jewelry" />
+        <mj-text font-size="24px" font-weight="600" align="center" color="#2c2c2c" padding="15px 0 5px">
+          Luna & Stone Jewelry
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Hero Section -->
+    <mj-section background-color="#f8f6f3" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="14px" font-weight="600" color="#8B4513" align="center" padding="0 0 10px" text-transform="uppercase" letter-spacing="2px">
+          Gemstone Guide
+        </mj-text>
+        <mj-text font-size="32px" font-weight="600" align="center" color="#2c2c2c" padding="0 0 15px">
+          The Magic Behind Your Stones
+        </mj-text>
+        <mj-text font-size="18px" align="center" color="#6b6b6b" padding="0 0 30px">
+          Every gemstone carries its own energy and history. Here's what makes each Luna & Stone piece special.
+        </mj-text>
+        <mj-image src="https://images.unsplash.com/photo-1518991669430-6e4f67b8ab85?w=600" width="500px" alt="Collection of gemstones" />
+      </mj-column>
+    </mj-section>
+
+    <!-- Introduction -->
+    <mj-section background-color="#ffffff" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="18px" color="#4a4a4a" padding="0 0 20px">
+          Hi {{first_name|default:"beautiful"}},
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          Since you joined our Luna & Stone family, I wanted to share something close to my heart: the stories and meanings behind the gemstones I work with.
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          Each stone isn't just chosen for its beauty (though they are stunning!) — I select them for their unique properties and the intentions they can bring to your daily life. Let me introduce you to some of my favorites...
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Gemstone Guide -->
+    <mj-section background-color="#f8f6f3" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="24px" font-weight="600" color="#2c2c2c" align="center" padding="0 0 30px">
+          Your Gemstone Guide
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Moonstone -->
+    <mj-section background-color="#ffffff" padding="30px 20px">
+      <mj-column width="35%">
+        <mj-image src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=400" width="100%" alt="Moonstone jewelry" />
+      </mj-column>
+      <mj-column width="65%">
+        <mj-text font-size="22px" font-weight="600" color="#2c2c2c" padding="0 0 15px">
+          🌙 Moonstone
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 15px">
+          <strong>Known for:</strong> Intuition, emotional balance, new beginnings
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 15px">
+          Moonstone has been treasured for thousands of years for its connection to lunar energy. It's believed to enhance intuition and promote emotional healing — perfect for those seeking balance in their lives.
+        </mj-text>
+        <mj-text font-size="14px" color="#8B4513" padding="0">
+          <strong>Perfect for:</strong> Daily wear, meditation, times of transition
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Rose Quartz -->
+    <mj-section background-color="#f8f6f3" padding="30px 20px">
+      <mj-column width="35%">
+        <mj-image src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=400" width="100%" alt="Rose quartz jewelry" />
+      </mj-column>
+      <mj-column width="65%">
+        <mj-text font-size="22px" font-weight="600" color="#2c2c2c" padding="0 0 15px">
+          💕 Rose Quartz
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 15px">
+          <strong>Known for:</strong> Love, compassion, emotional healing
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 15px">
+          Called the "stone of unconditional love," rose quartz opens the heart chakra and promotes self-love and compassion. Its gentle pink energy is soothing and nurturing.
+        </mj-text>
+        <mj-text font-size="14px" color="#8B4513" padding="0">
+          <strong>Perfect for:</strong> Self-care rituals, heart healing, attracting love
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Amethyst -->
+    <mj-section background-color="#ffffff" padding="30px 20px">
+      <mj-column width="35%">
+        <mj-image src="https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=400" width="100%" alt="Amethyst pendant" />
+      </mj-column>
+      <mj-column width="65%">
+        <mj-text font-size="22px" font-weight="600" color="#2c2c2c" padding="0 0 15px">
+          🔮 Amethyst
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 15px">
+          <strong>Known for:</strong> Clarity, protection, spiritual growth
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 15px">
+          This stunning purple stone has been prized since ancient times for its ability to enhance clarity and spiritual awareness. It's said to protect against negative energy while promoting peace of mind.
+        </mj-text>
+        <mj-text font-size="14px" color="#8B4513" padding="0">
+          <strong>Perfect for:</strong> Meditation, protection, enhancing intuition
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Labradorite -->
+    <mj-section background-color="#f8f6f3" padding="30px 20px">
+      <mj-column width="35%">
+        <mj-image src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=400" width="100%" alt="Labradorite jewelry" />
+      </mj-column>
+      <mj-column width="65%">
+        <mj-text font-size="22px" font-weight="600" color="#2c2c2c" padding="0 0 15px">
+          ✨ Labradorite
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 15px">
+          <strong>Known for:</strong> Transformation, protection, magical thinking
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 15px">
+          With its mesmerizing flash of colors, labradorite is known as the stone of transformation. It's believed to strengthen intuition and help you discover your true purpose.
+        </mj-text>
+        <mj-text font-size="14px" color="#8B4513" padding="0">
+          <strong>Perfect for:</strong> Times of change, creative pursuits, spiritual work
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Care Tips -->
+    <mj-section background-color="#2c2c2c" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="24px" font-weight="600" color="#ffffff" align="center" padding="0 0 25px">
+          Caring for Your Gemstone Jewelry
+        </mj-text>
+        <mj-text color="#e8e8e8" padding="0 0 20px">
+          <strong>🧼 Gentle Cleaning:</strong> Use warm water and mild soap. Avoid harsh chemicals that can damage natural stones.
+        </mj-text>
+        <mj-text color="#e8e8e8" padding="0 0 20px">
+          <strong>🌙 Energy Cleansing:</strong> Place your jewelry under moonlight overnight to recharge the stones' natural energy.
+        </mj-text>
+        <mj-text color="#e8e8e8" padding="0 0 20px">
+          <strong>🏠 Proper Storage:</strong> Store pieces separately in soft pouches to prevent scratching.
+        </mj-text>
+        <mj-text color="#e8e8e8" padding="0 0 20px">
+          <strong>💧 Water Wisdom:</strong> Remove jewelry before swimming, showering, or exercising to preserve the metals.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Personal Note -->
+    <mj-section background-color="#ffffff" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="20px" font-weight="600" color="#2c2c2c" padding="0 0 20px">
+          Why I Choose Each Stone
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          When I select gemstones for Luna & Stone pieces, I don't just look at their beauty (though that's important too!). I spend time with each stone, feeling its energy and imagining the person who might need its particular magic in their life.
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          Whether you believe in crystal energy or simply love the way they look, I hope each piece brings you joy and reminds you of your own inner strength.
+        </mj-text>
+        <mj-text color="#4a4a4a" padding="0 0 20px">
+          With love and light,<br/>
+          <em>Sarah</em>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Shop CTA -->
+    <mj-section background-color="#f8f6f3" padding="40px 20px">
+      <mj-column>
+        <mj-text font-size="22px" font-weight="600" color="#2c2c2c" align="center" padding="0 0 15px">
+          Ready to Find Your Stone?
+        </mj-text>
+        <mj-text font-size="16px" color="#6b6b6b" align="center" padding="0 0 25px">
+          Explore our collection and discover which gemstone calls to you
+        </mj-text>
+        <mj-button background-color="#8B4513" color="#ffffff" href="{{ organization.url }}" padding="15px 30px">
+          Shop Gemstone Jewelry
+        </mj-button>
+        <mj-text font-size="14px" color="#8B4513" align="center" padding="15px 0 0">
+          <strong>Remember:</strong> Your WELCOME15 code is still valid for {{days_remaining}} more days!
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- Footer -->
+    <mj-section background-color="#2c2c2c" padding="40px 20px">
+      <mj-column>
+        <mj-social font-size="15px" icon-size="30px" mode="horizontal" align="center">
+          <mj-social-element name="instagram" background-color="#E4405F" href="https://instagram.com/lunaandstonejewelry" />
+          <mj-social-element name="facebook" background-color="#3b5998" href="https://facebook.com/lunaandstonejewelry" />
+          <mj-social-element name="pinterest" background-color="#bd081c" href="https://pinterest.com/lunaandstonejewelry" />
+        </mj-social>
+        <mj-text font-size="14px" color="#a8a8a8" align="center" padding="25px 0 10px">
+          Luna & Stone Jewelry | Portland, Oregon<br/>
+          hello@lunaandstone.com
+        </mj-text>
+        <mj-text font-size="12px" color="#707070" align="center" padding="15px 0 0">
+          <a href="{% unsubscribe_link %}" style="color: #8B4513;">Unsubscribe</a> | <a href="{{ organization.url }}" style="color: #8B4513;">Visit our store</a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+  </mj-body>
+</mjml>
